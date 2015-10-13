@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-4
+      .col-md-4
+        h1= title
+        p Welcome to #{title}
+        p=countdown
+      .col-md-4
+    .row
+      .col-md-4
+      .col-md-4
+       form(action='/cohort' method='post')
+        select(name = 'cohort')
+          option(value='') please select an cohort
+          option(value='8') g[8] Fullstack Boulder April 2015
+          option(value='12') g[12] Fullstack Boulder July 2015
+        input(type='submit')
+      .col-md-4
